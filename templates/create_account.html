@@ -1,0 +1,69 @@
+<!DOCTYPE.html>
+<html>
+  <head>
+    <title>Create Account</title>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisdGDwtDivHF3APiFFzPq2r_2PETMWLUdT4-gSWk7HnT-rcy4fngqSVBKAk-8CilJqIA&usqp=CAU">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='index.css')}}">
+    <script src="static/create_account.js"></script>
+  </head>
+
+  <body>
+    </form>
+    <h2>Create Account</h2>
+    <form method="post" action="/create_account">
+      <input type="text" id="name" name="name" placeholder="Full Name" required><br>
+
+      <input type="email" id="email" name="email" placeholder="Email" required><br>
+
+      <select id="dropdown" name="dropdown" required>
+        <option value="" disabled selected>Select Class</option>
+
+        <option value="option1">25/1</option>
+        <option value="option2">25/2</option>
+        <option value="option3">25/3</option>
+        <option value="option4">25/4</option>
+        <option value="option5">25/5</option>
+        <option value="option6">25/6</option>
+        <option value="option7">25/7</option>
+        <option value="option8">25/8</option>
+        <option value="option9">25/9</option>
+        <option value="option10">25/10</option>
+        <option value="option11">25/11</option>
+        <option value="option12">25/12</option>
+        <option value="option13">25/13</option>
+        <option value="option14">25/14</option>
+        <option value="option15">25/15</option>
+        <option value="option16">25/16</option>
+        <option value="option17">25/17</option>
+        <option value="option18">25/18</option>
+        <option value="option19">25/19</option>
+        <option value="option20">25/20</option>
+        <option value="option21">25/21</option>
+        <option value="option22">25/22</option>
+        <option value="option23">25/23</option>
+        <option value="option24">25/24</option>
+        <option value="option25">25/25</option>
+        <option value="option26">25/26</option>
+        <option value="option27">25/27</option>
+        <option value="option28">25/28</option>
+        <option value="option29">25/29</option>
+        <option value="option30">25/30</option>
+        <option value="option31">25/31</option>
+        <option value="option32">25/32</option>
+        <option value="option33">25/33</option>
+        <option value="option34">25/34</option>
+        <option value="option35">25/35</option>
+
+      </select><br>
+
+      <input type="password" id="password" name="password" placeholder="Password" required><br>
+
+      <input type="password" id="c_password" name="c_password" placeholder="Confirm Password"required><br>
+
+      <input type="text" id="admin_code" name="admin_code" placeholder="Admin Code" required><br>
+
+      <input type="submit" value="Sign in" class="signin-button" onclick=check()>
+    </form>
+  </body>
+</html>

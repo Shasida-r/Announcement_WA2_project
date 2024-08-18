@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisdGDwtDivHF3APiFFzPq2r_2PETMWLUdT4-gSWk7HnT-rcy4fngqSVBKAk-8CilJqIA&usqp=CAU">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='index.css')}}">
+
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form action="/login" method="post">
+        <input type="text" id="name" name="name" placeholder="Full Name" required><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

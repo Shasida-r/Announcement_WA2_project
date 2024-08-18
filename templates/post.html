@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisdGDwtDivHF3APiFFzPq2r_2PETMWLUdT4-gSWk7HnT-rcy4fngqSVBKAk-8CilJqIA&usqp=CAU">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <meta charset="UTF-8" />
+        <title>Create Post</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='index.css')}}">
+        <script src="static/post.js"></script>
+
+    </head>
+    <body>
+        <form action = "/result" method = "POST">
+            <p>Type: <br> 
+                <input type="radio" id="GA" name="type" value="GA" checked>
+                <label>General Announcements</label>
+                <input type="radio" id="HW" name="type" value="HW">
+                <label>Homework</label>
+            </p>
+            <Div id = "divHW">
+                <p>Subject 
+                    <select id="subject" name="subject">
+                        <option value="Computing">Computing</option>
+                        <option value="Economics">Economics</option>
+                        <option value="General Paper">General Paper</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                    </select>
+                </p>
+                <p>Due Date <input type = "text" name = "date" id="datepicker"/></p>
+            </Div>
+            <Div id="divGA">
+                <p>Subject <input type = "text" name = "title" /></p>
+            </Div>
+            <p>Description <textarea id="desc" name="desc" rows="4" cols="50"></textarea></p>
+            <input type = "hidden" name = "name" value="{{name}}" />
+            <p><input type = "submit" value = "submit" /></p>
+        </form>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script type="text/javascript" language="javascript">
+       $(document).ready(function() {  
+            //alert("test");
+            //$("p").css("background-color", "cyan"); 
+            $("#divHW").hide();
+
+            $("#GA").click(function(){
+                $("#divHW").hide(); 
+                $("#divGA").show(); 
+            });
+            $("#HW").click(function(){
+                $("#divHW").show();
+                $("#divGA").hide(); 
+            });
+
+            $( function() {
+              $( "#datepicker" ).datepicker();
+            });
+        });  
+        </script>
+      <button onclick="window.location.href='{{url_for('back')}}';" class="back">back</button>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE.html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisdGDwtDivHF3APiFFzPq2r_2PETMWLUdT4-gSWk7HnT-rcy4fngqSVBKAk-8CilJqIA&usqp=CAU">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Class Announcements</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='index.css')}}">
+        <script src="static/index.js"></script>
+
+    </head>
+    <body>
+        <div>
+            <div class="header">
+                <Table>
+                    <TR>
+                        <TD><h1>Class Announcements</h1></TD>
+                        <button onclick="window.location.href='{{url_for('create_account')}}';" class="create-account">Create Account</button>
+                    </TR>
+                </Table>
+             </div>
+            <div class="split left">
+                <div class="centered">
+                    <span class="text-center"><h2>General Announcements</h2></span>
+                    {% for item in result_ga %}
+                    <div class="container">
+                        <Table class="table-full-width">
+                            <TR><TD><B>{{item[1]}}</B></TD><TD align="right"><B>{{item[3]}}</B></TD></TR>
+                            <TR><TD colspan="3">{{item[2]}}
+                            </TD></TR>
+                        </Table>
+                        <span class="time-right">{{item[0]}}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="split right">
+                <div class="centered">
+                    <span class="text-center"><h2>Homework</h2></span>
+                    {% for item in result %}
+                        <div class="container">
+                            <Table class="table-full-width">
+                                <TR><TD><B>{{item[4]}}</B></TD><TD align="center"><B>{{item[1]}}</B></TD><TD align="right"><B>Due: {{item[2]}}</B></TD></TR>
+                                <TR><TD colspan="3">{{item[3]}}
+                                </TD></TR>
+                            </Table>
+                            <span class="time-right">{{item[0]}}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>    
+
+    <button onclick="window.location.href='{{url_for('login_button')}}';" class="login-button">+</button>
+        
+   </body>
+</html>
