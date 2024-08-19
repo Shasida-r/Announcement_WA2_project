@@ -1,1 +1,1 @@
-[{"name": "Shasidar", "email": "Shasidarakannan@gmail.com", "class": "option12", "password": "1"}]
+[{"name": "Shasidar", "email": "Shasidarakannan@gmail.com", "class": "option12", "password": "1"}, {"name": "Seth Teo", "email": "seth@gmail.com", "class": "option12", "password": "Fakepw"}]
