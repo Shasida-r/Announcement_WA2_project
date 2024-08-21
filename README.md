@@ -16,6 +16,6 @@ This repository contains the code for my Class Announcements website, developed 
 - **Homework Announcements:** Users can also post homework-related announcements, helping to keep track of assignments and due dates.
 
 ## Technology Stack
-- **Backend:** Flask, Python
+- **Backend:** Flask, Python, JavaScript
 - **Frontend:** HTML, CSS
 - **Database:** .txt flatfile
